@@ -1,0 +1,71 @@
+@-webkit-keyframes verticalLineAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  
+  @-moz-keyframes verticalLineAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  
+  @-o-keyframes verticalLineAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  
+  @keyframes verticalLineAnimation {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  
+  @-webkit-keyframes horizontalLineAnimation {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 45%;
+    }
+  }
+  
+  @-moz-keyframes horizontalLineAnimation {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 45%;
+    }
+  }
+  
+  @-o-keyframes horizontalLineAnimation {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 45%;
+    }
+  }
+  
+  @keyframes horizontalLineAnimation {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 45%;
+    }
+  } 

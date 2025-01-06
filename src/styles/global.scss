@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: normal;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  padding-left: 7em;
+  padding-right: 7em;
+}
+
+.main-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-line,
+.right-line,
+.middle-line-horizontal,
+.middle-line-vertical {
+  display: flex;
+  position: fixed;
+  width: 0.1em;
+  height: 100%;
+  top: 0;
+  background-color: #afb8c9;
+}
+
+.left-line {
+  left: 5%;
+}
+
+.right-line {
+  right: 5%;
+}
+
+.middle-line-vertical {
+  z-index: -1;
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
+  left: 0%;
+  border-right: solid 0.1em #afb8c9;
+  animation: verticalLineAnimation 1s ease-in-out;
+  -webkit-animation: verticalLineAnimation 1s ease-in-out;
+  -moz-animation: verticalLineAnimation 1s ease-in-out;
+  -o-animation: verticalLineAnimation 1s ease-in-out;
+}
+
+.middle-line-horizontal {
+  z-index: -1;
+  width: 90%;
+  height: 45%;
+  background-color: transparent;
+  left: 5%;
+  border-bottom: solid 0.1em #afb8c9;
+  border-bottom: solid 0.1em #afb8c9;
+  animation: horizontalLineAnimation 1s ease-in-out;
+  -webkit-animation: horizontalLineAnimation 1s ease-in-out;
+  -moz-animation: horizontalLineAnimation 1s ease-in-out;
+  -o-animation: horizontalLineAnimation 1s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+
+  .left-line,
+  .right-line {
+    display: none;
+  }
+}

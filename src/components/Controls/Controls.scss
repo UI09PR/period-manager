@@ -1,0 +1,163 @@
+.controls {
+  font-family: "PT Sans", sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+.controls p {
+  width: 100%;
+  text-align: start;
+  font-size: 1.7em;
+  color: #42567a;
+  margin-bottom: 0.5em;
+  font-weight: 100;
+  margin-left: 0.5em;
+}
+
+.controls:nth-child(3) {
+  order: 2;
+}
+
+.controls-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5em;
+}
+
+.controls-buttons button {
+  padding: 0.3em 0.55em;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #42567a;
+  border: solid 0.2em #42567a80;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+.controls-buttons button:hover,
+.controls-buttons button:active {
+  border: solid 0.1em #323d5180;
+}
+
+.pagination-target,
+.pagination-element {
+  border-radius: 100%;
+  width: 0.36em;
+  height: 0.4em;
+  margin-left: 0.8em;
+}
+
+.pagination-target {
+  background-color: #42567a;
+}
+
+.pagination-element {
+  background-color: rgba(73, 86, 109, 0.522);
+}
+
+.pagination-container {
+  flex-grow: 0.1;
+}
+
+.circle-pagination {
+  transition: all 0.5s ease;
+}
+
+.dot,
+.theme-category {
+  transition: opacity 0.3s ease;
+}
+
+.circle-pagination {
+  position: absolute;
+  z-index: 1000;
+  border-radius: 100%;
+  border: solid 0.1em #afb8c9;
+  width: 43vw;
+  height: 43vw;
+  top: 4vw;
+  left: 28.5vw;
+}
+
+.dot {
+  position: absolute;
+}
+
+.circle-pagination-target,
+.circle-pagination-element {
+  border-radius: 100%;
+  width: 0.76em;
+  height: 0.8em;
+  background-color: #42567a;
+}
+
+.dot:hover,
+.dot:active,
+.circle-pagination-target {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  width: 4.8em;
+  height: 4.8em;
+  background-color: #f4f4f4;
+  border: solid 0.1em #42567a;
+  cursor: pointer;
+}
+
+.circle-pagination-target,
+.circle-pagination-target:hover,
+.circle-pagination-target:active {
+  transform: translate(0, 0);
+}
+
+.dot::after,
+.circle-pagination-target::after {
+  content: var(--number);
+  color: #42567a;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.dot:hover::after,
+.circle-pagination-target::after {
+  opacity: 1;
+}
+
+.theme-category {
+  color: #42567a;
+  pointer-events: none;
+  position: absolute;
+  font-size: 120%;
+  margin-left: 160%;
+  width: 1%;
+}
+
+@media (max-width: 480px) {
+  .controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 3em;
+    padding-right: 0em;
+    padding-left: 1em;
+  }
+
+  .controls:nth-child(3) {
+    order: 3;
+  }
+
+  .controls-buttons button {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
